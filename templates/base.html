@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Portfolio Site{% endblock %}</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'images/tt.png' %}">
+  <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/css/narrow-jumbotron.css' %}" type="text/css">
+  <body>
+    <div class="container">
+      <header class="header clearfix">
+       <nav>
+         <ul class="nav nav-pills float-right">
+           <li class="nav-item">
+             <a class="nav-link text-muted" href="{% url 'index' %}">Home</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link text-muted" href="{% url 'projects:project-list' %}">Portfolio</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link text-muted" href="{% url 'skills:skill-list' %}">Skills</a>
+           </li>
+         </ul>
+       </nav>
+       <h3 ><a class="text-muted" href="{% url 'index' %}">Portfolio Website</a></h3>
+     </header>
+
+     <main role="main">
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+  </main><br><br>
+    <div class="container">
+      <h2 class="text-muted">Contact Details</h2>
+      <footer class="footer">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Email Address: </h4>
+            <a href="mailto:talentmabuto3@gmail.com">talentmabuto3@gmail.com</a>
+          </div>
+          <div class="col-md-4">
+            <h4>Address</h4>
+            1238 Southlea Park <br>
+            Harare, Zimbabwe <br>
+          </div>
+          <div class="col-md-4">
+            <h4>Mobile Number</h4>
+            <p>+263774579680</p>
+          </div>
+        </div><br><br>
+        <p>Talent Mabuto &copy; {% now 'Y' %} Portfolio Website</p>
+      </footer>
+    </div>
+  </body>
+</html>

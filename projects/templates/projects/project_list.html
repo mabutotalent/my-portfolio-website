@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <p>
+    <h2 class="text-muted">List of projects</h2>
+  </p><br>
+      {% for project in projects %}
+          <p><a href="{% url 'projects:project-detail' project.slug %}">{{ project.project_title }}</a></p>
+      {% endfor %}
+{% endblock %}

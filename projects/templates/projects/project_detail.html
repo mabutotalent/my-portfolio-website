@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <p>
+    <h1 class="text-muted">{{ project.project_title }}</h1>
+  </p><br>
+  <p>{{ project.project_description }}</p>
+  <p>Sourcecode Here <a href="{{ project.project_url }}">{{ project.project_url }}</a></p>
+{% endblock %}

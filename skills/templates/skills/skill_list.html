@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2 class="text-muted">My Skills</h2><br>
+  <p>
+  <div class="card-group">
+    {% for skill in skills %}
+    <div class="card">
+      <div class="card-header">
+      <medium class="text-muted">{{ skill.skill_name }}</small>
+    </div>
+      <div class="card-body">
+        <h4 class="card-title"></h4>
+        <b><p class="card-text text-muted">{{ skill.skill_category }}</p></b>
+        <p class="card-text">Level: {{ skill.skill_level }}</p>
+    </div>
+    </div>
+    {% endfor %}
+  </div>
+  </p>
+{% endblock %}
